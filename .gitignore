@@ -1,0 +1,4 @@
+
+src/backend/config/config.toml
+*.pyc
+ailoggerSDK/ailogger_PythonSDK/ailogger_PythonSDK.egg-info/*
