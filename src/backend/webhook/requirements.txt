@@ -37,7 +37,7 @@ command-not-found==0.3
 configobj==5.0.8
 constantly==15.1.0
 crashtest==0.3.1
-cryptography==42.0.4
+cryptography==42.0.5
 cupshelpers==1.0
 dataclasses-json==0.6.4
 dbus-python==1.2.18
