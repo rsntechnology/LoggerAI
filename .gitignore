@@ -3,3 +3,5 @@ src/backend/webhook/config/config.toml
 *.pyc
 ailoggerSDK/ailogger_PythonSDK/ailogger_PythonSDK.egg-info/*
 ailoggerSDK/ailogger_PythonSDK/build
+.vscode/settings.json
+src/backend/automation/app/config/config.toml

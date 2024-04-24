@@ -6,9 +6,13 @@ from datetime import datetime
 from typing import List
 from .entities import Loger, Metric, Error
 from .llm import analyze_error_with_openai
+import toml
+
 class DataRepository:
     def __init__(self, data_directory: str):
         self.data_directory = data_directory
+        config = toml.load("config/config.toml")
+        self.aianalysis = config["openai"]["enable"]
 
     def _encode_data(self, data: dict) -> bytes:
         """Encode dictionary data to bytes."""
@@ -54,7 +58,8 @@ class DataRepository:
             file["metrics"][()] = self._encode_data(metrics)
 
     def save_error(self, error: Error):
-        if (error.message["type"] == "error.exception"):
+        if (error.message["type"] == "error.exception" and self.aianalysis == True):
+            print("Analyzing error with OpenAI")
             aianalysis = analyze_error_with_openai(error.message["message"])
             error.message["ai_analysis"] = aianalysis
         partition = self._get_current_partition()

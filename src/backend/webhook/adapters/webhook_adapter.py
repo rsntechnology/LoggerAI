@@ -13,8 +13,6 @@ import toml
 config = toml.load("config/config.toml")
 router = APIRouter()
 
-router = APIRouter()
-
 @router.post("/")
 async def process_webhook(data: dict, background_tasks: BackgroundTasks):
     data =(json.dumps(data))
@@ -29,6 +27,6 @@ async def process_webhook(data: dict, background_tasks: BackgroundTasks):
     use_case = ProcessWebhookUseCase(data_repository=data_repository)
 
     # Queue the execution of the use case
-    background_tasks.add_task(use_case.execute, data)
+    use_case.execute(data)
 
-    return {"message": "Webhook queued for processing"}
+    return {"message": "Webhook processed successfully"}

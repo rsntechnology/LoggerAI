@@ -2,14 +2,16 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 from .entities import UseCase
 from fastapi import HTTPException
+import toml
 
 class UseCaseRepository:
     def __init__(self):
-        MONGODB_CONNECTION_URL = "mongodb://localhost:27017"
-        MONGODB_DATABASE_NAME = "usecase"
-        client = MongoClient(MONGODB_CONNECTION_URL)
+        config = toml.load("config/config.toml")
+        self.url = config["mongodb"]["url"]
+        self.database_name = config["mongodb"]["database_name"]
+        client = MongoClient(self.url)
         db = client["LoggerAI"]
-        self.collection = db[MONGODB_DATABASE_NAME]
+        self.collection = db[self.database_name]
 
     def create_usecase(self, usecase: UseCase):
         if self.collection.find_one({"id": usecase.id}):

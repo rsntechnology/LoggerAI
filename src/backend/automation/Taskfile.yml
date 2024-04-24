@@ -1,0 +1,21 @@
+version: 3
+
+vars:
+  BUILD_NAME: Logger_automation
+
+tasks:
+  setup:
+    desc: Downloads the library dependencies
+    cmds:
+      - pip install requirements.txt
+
+  test:
+    desc: run the code
+    cmds:
+      - uvicorn main:app --reload --port 8080
+
+  run:
+    desc: run the code
+    cmds:
+      - pip install requirements.txt
+      - uvicorn main:app --reload --port 8080

@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  automation:
+    build:
+      context: ./automation
+      dockerfile: Dockerfile
+    volumes:
+      - ./automation:/app
+
+  webhook:
+    build:
+      context: ./webhook
+      dockerfile: Dockerfile
+    volumes:
+      - ./webhook:/app
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27017:27017
