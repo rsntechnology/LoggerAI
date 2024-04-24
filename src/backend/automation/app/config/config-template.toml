@@ -1,0 +1,5 @@
+title = "config file for backend"
+
+[mongodb]
+url = "mongodb://mongodb:27017"
+database_name "usecase"
