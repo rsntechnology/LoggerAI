@@ -250,7 +250,7 @@ toml==0.10.2
 tomli==2.0.1
 tomlkit==0.12.4
 tpm2-pkcs11-tools==1.33.7
-tqdm==4.66.2
+tqdm==4.66.3
 trove-classifiers==2024.4.10
 Twisted==23.10.0
 typer==0.12.3
