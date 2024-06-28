@@ -102,7 +102,7 @@ language-selector==0.1
 launchpadlib==1.10.16
 lazr.restfulclient==0.14.4
 lazr.uri==1.0.6
-litellm==1.35.5
+litellm==1.40.29
 llama-index==0.10.29
 llama-index-agent-openai==0.2.2
 llama-index-cli==0.1.11
@@ -217,7 +217,7 @@ PyYAML==6.0.1
 rapidfuzz==3.8.1
 regex==2023.12.25
 reportlab==3.6.13
-requests==2.31.0
+requests==2.32.2
 requests-gssapi==1.2.3
 requests-kerberos==0.12.0
 requests-ntlm==1.1.0
@@ -250,7 +250,7 @@ toml==0.10.2
 tomli==2.0.1
 tomlkit==0.12.4
 tpm2-pkcs11-tools==1.33.7
-tqdm==4.66.2
+tqdm==4.66.3
 trove-classifiers==2024.4.10
 Twisted==23.10.0
 typer==0.12.3
@@ -261,7 +261,7 @@ ubuntu-drivers-common==0.0.0
 ubuntu-pro-client==8001
 ufw==0.36.1
 unattended-upgrades==0.1
-urllib3==1.26.18
+urllib3==1.26.19
 usb-creator==0.3.7
 uvicorn==0.29.0
 uvloop==0.19.0
